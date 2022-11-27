@@ -29,10 +29,12 @@ public class Get04 extends RestfulBaseUrl {
 
         //send the request and get the response
         Response response=given().spec(spec).when().get("/{first}");
+
         response.prettyPrint();
 
         //do assertion
         assertEquals(200,response.statusCode());
+
         assertTrue( response.asString().contains("bookingid"));
 
     }
