@@ -34,6 +34,7 @@ public class Get01b {
         //do assertion
         response.then().statusCode(200).contentType(ContentType.JSON).statusLine("HTTP/1.1 200 OK");
 
+
         response.then().
                 assertThat().
                 statusCode(200).
