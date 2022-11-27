@@ -37,6 +37,7 @@ public class Get03b extends ReqresBaseUrl {
 
         //send the request and get the response
         Response response = given().spec(spec).when().get("/{first}/{second}");
+
         response.prettyPrint();
 
         //do assertion
