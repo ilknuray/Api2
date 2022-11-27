@@ -38,8 +38,10 @@ public class get02b extends ReqresBaseUrl {
         //do assertion
         assertEquals(404,response.statusCode());
         assertEquals("HTTP/1.1 404 Not Found",response.statusLine());
+
         assertEquals("cloudflare",response.header("Server"));
         assertEquals(0,response.asString().replaceAll("[^A-Za-z0-9]","").length());
+
         assertEquals(2,response.asString().replaceAll("\\s","").length());
 
     }
