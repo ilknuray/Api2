@@ -35,6 +35,7 @@ public class Get02 {
         // iii) Type code to send request ( Talep gondermek icin kod yazimi)
 
         Response response=given().when().get(url);
+
         response.prettyPrint();
 
         // iv) Do Assertion (dogrulama yapmak)
