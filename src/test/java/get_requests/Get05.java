@@ -47,7 +47,9 @@ public class Get05 extends ReqresBaseUrl {
 
         //do assertion
         SoftAssert softAssert = new SoftAssert();
+
         JsonPath jsonPath = response.jsonPath();
+
         System.out.println(jsonPath.getInt("data.id"));
         softAssert.assertEquals(jsonPath.getInt("data.id"),3);
         softAssert.assertEquals(jsonPath.getString("data.name"),"true red");
