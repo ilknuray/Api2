@@ -8,6 +8,7 @@ public class ReqresBaseUrl {
     protected RequestSpecification spec;
 
     @Before
+
     public void setup() {
         spec = new RequestSpecBuilder().setBaseUri("https://reqres.in/api").build();
     }
