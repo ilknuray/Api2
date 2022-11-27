@@ -28,11 +28,14 @@ public class Delete01 extends JsonplaceholderBaseUrl {
         //set the expected data
         Map<String,String>expectedData=new HashMap<>();
 
+
         //send the request
         Response response=given().spec(spec).delete("/{first}/{second}");
+
         response.prettyPrint();
         //do assertion
         Map actualData= ObjectMapperUtils.convertJsonToJava(response.asString(), HashMap.class);
+
 
         //1. Yol
         assertEquals(expectedData, actualData);
