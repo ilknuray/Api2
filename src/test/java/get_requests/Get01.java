@@ -51,6 +51,7 @@ public class Get01 {
         // Bizden post, put ya da patch istenmedigi icin bu case de kullanmayacagiz.
         // iii) Type code to send request ( Talep gondermek icin kod yazimi)
         Response response=given().when().get(url);
+
         response.prettyPrint();
 
         // iv) Do Assertion (dogrulama yapmak)
